@@ -1,0 +1,73 @@
+{% extends "fabric_shop/base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}
+<title> Fabric_shop </title>
+{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Aroma Shop - Home</title>
+	<link rel="icon" href='{% static "fabric_shop/img/Fevicon.png" %}' type="image/png">
+  <link rel="stylesheet" href='{% static "fabric_shop/vendors/bootstrap/bootstrap.min.css" %}'>
+  <link rel="stylesheet" href='{% static "fabric_shop/vendors/fontawesome/css/all.min.css" %}'>
+	<link rel="stylesheet" href='{% static "fabric_shop/vendors/themify-icons/themify-icons.css" %}'>
+  <link rel="stylesheet" href='{% static "fabric_shop/vendors/nice-select/nice-select.css" %}'>
+  <link rel="stylesheet" href='{% static "fabric_shop/vendors/owl-carousel/owl.theme.default.min.css" %}'>
+  <link rel="stylesheet" href='{% static "fabric_shop/vendors/owl-carousel/owl.carousel.min.css" %}'>
+  <link rel="stylesheet" href='{% static "fabric_shop/css/style.css" %}'>
+</head>
+<body>
+<div class="container">
+<div class="d-flex align-content-end flex-wrap" >
+
+{% for category in categories %}
+{#    <div class="col-md-6 col-lg-3 ftco-animate">#}
+{#        <div class="product">#}
+{#            <a href="/category/{{category.name}}" class="img-prod"> <img class="img-fluid" src='{{ category.image.url }}' alt="Colorlib Template">#}
+{#            </a>#}
+{#                <div class="text py-3 pb-4 px-3 text-center">#}
+{#                    <h3><a href="/category/{{category.name}}">{{ category.name }}</a></h3>#}
+{##}
+{#                </div>#}
+{#        </div>#}
+{#    </div>#}
+    <section class="card-body">
+              <div class="col-md-3 col-lg-7">
+                <div class="card text-center card-product">
+                  <div class="card-product__img">
+                    <a href="/category/{{category.name}}" class="img-prod"> <img class="img-fluid" src='{{ category.image.url }}' alt="Colorlib Template">
+                    </a>
+                  <div class="card-body">
+                    <p>Cмесовые ткани</p>
+                    <h4 class="card-product__title"><a href="/category/{{category.name}}">{{ category.name }}</a></h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+    </section>
+{% endfor %}
+</div>
+</div>
+
+
+
+  <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
+  <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="vendors/skrollr.min.js"></script>
+  <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+  <script src="vendors/nice-select/jquery.nice-select.min.js"></script>
+  <script src="vendors/nouislider/nouislider.min.js"></script>
+  <script src="vendors/jquery.ajaxchimp.min.js"></script>
+  <script src="vendors/mail-script.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+{% endblock %}

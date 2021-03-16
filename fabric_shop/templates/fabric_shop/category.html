@@ -1,0 +1,75 @@
+{% extends "fabric_shop/base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}
+<title> Fabric_shop </title>
+{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Aroma Shop - Home</title>
+	<link rel="icon" href='{% static "fabric_shop/img/Fevicon.png" %}' type="image/png">
+  <link rel="stylesheet" href='{% static "fabric_shop/vendors/bootstrap/bootstrap.min.css" %}'>
+  <link rel="stylesheet" href='{% static "fabric_shop/vendors/fontawesome/css/all.min.css" %}'>
+	<link rel="stylesheet" href='{% static "fabric_shop/vendors/themify-icons/themify-icons.css" %}'>
+  <link rel="stylesheet" href='{% static "fabric_shop/vendors/nice-select/nice-select.css" %}'>
+  <link rel="stylesheet" href='{% static "fabric_shop/vendors/owl-carousel/owl.theme.default.min.css" %}'>
+  <link rel="stylesheet" href='{% static "fabric_shop/vendors/owl-carousel/owl.carousel.min.css" %}'>
+  <link rel="stylesheet" href='{% static "fabric_shop/css/style.css" %}'>
+</head>
+
+<div class="container">
+<div class="d-flex align-content-end flex-wrap" >
+
+{% for product in products %}
+    <div class="col-lg-2 col-md-8 col-sm-12">
+        <div class="product">
+            <a href="/single_product/{{product.id}}" class="img-prod"> <img class="img-fluid" src='{{ product.image.url }}' alt="Colorlib Template">
+            </a>
+                <div class="text py-3 pb-4 px-3 text-center">
+                    <h5><a href="/single_product/{{product.id}}">{{ product.name }} {{product.category }}</a></h5>
+                    <h7><a href="#">{{ product.price }} руб./м</a></h7>
+                </div>
+        </div>
+    </div>
+{% endfor %}
+</div>
+</div>
+<div class="col text-center">
+    <div class="block-27">
+            {% if products.has_previous %}
+                <a href="?page=1">&laquo; 1</a>
+                <a href="?page={{ products.previous_page_number }}">&lt;</a>
+            {% endif %}
+
+            <span class="current">
+            Page {{ products.number }} of {{ products.paginator.num_pages }}.
+            </span>
+
+            {% if products.has_next %}
+                <a href="?page={{ products.next_page_number }}">&gt;</a>
+                <a href="?page={{ products.paginator.num_pages }}">{{ products.paginator.num_pages }} &raquo;</a>
+            {% endif %}
+    </div>
+</div>
+
+
+
+  <script src='{% static "fabric_shop/vendors/jquery/jquery-3.2.1.min.js" %}'></script>
+  <script src='{% static "fabric_shop/vendors/bootstrap/bootstrap.bundle.min.js" %}'></script>
+  <script src='{% static "fabric_shop/vendors/skrollr.min.js" %}'></script>
+  <script src='{% static "fabric_shop/vendors/owl-carousel/owl.carousel.min.js" %}'></script>
+  <script src='{% static "fabric_shop/vendors/nice-select/jquery.nice-select.min.js" %}'></script>
+  <script src='{% static "fabric_shop/vendors/jquery.ajaxchimp.min.js" %}'></script>
+  <script src='{% static "fabric_shop/vendors/mail-script.js" %}'></script>
+  <script src='{% static "fabric_shop/js/main.js" %}'></script>
+</body>
+</html>
+{% endblock %}

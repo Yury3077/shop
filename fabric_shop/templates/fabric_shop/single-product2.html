@@ -1,0 +1,86 @@
+{% extends "fabric_shop/base.html" %}
+{% load static %}
+
+{% block title %}
+<title> Fabric_shop </title>
+{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Aroma Shop - Home</title>
+	<link rel="icon" href='{% static "fabric_shop/img/Fevicon.png" %}' type="image/png">
+  <link rel="stylesheet" href='{% static "fabric_shop/vendors/bootstrap/bootstrap.min.css" %}'>
+  <link rel="stylesheet" href='{% static "fabric_shop/vendors/fontawesome/css/all.min.css" %}'>
+	<link rel="stylesheet" href='{% static "fabric_shop/vendors/themify-icons/themify-icons.css" %}'>
+  <link rel="stylesheet" href='{% static "fabric_shop/vendors/nice-select/nice-select.css" %}'>
+  <link rel="stylesheet" href='{% static "fabric_shop/vendors/owl-carousel/owl.theme.default.min.css" %}'>
+  <link rel="stylesheet" href='{% static "fabric_shop/vendors/owl-carousel/owl.carousel.min.css" %}'>
+
+  <link rel="stylesheet" href='{% static "fabric_shop/css/style.css" %}'>
+</head>
+<body>
+
+{% for single_product in single_product %}
+
+
+  <!--================Single Product Area =================-->
+	<div class="product_image_area">
+		<div class="container">
+			<div class="row s_product_inner">
+				<div class="col-lg-6">
+					<div class="owl-carousel owl-theme s_Product_carousel">
+						<div class="single-prd-item">
+							<img class="img-fluid" src="{{ single_product.image.url }}" alt="">
+						</div>
+						<!-- <div class="single-prd-item">
+							<img class="img-fluid" src="img/category/s-p1.jpg" alt="">
+						</div>
+						<div class="single-prd-item">
+							<img class="img-fluid" src="img/category/s-p1.jpg" alt="">
+						</div> -->
+					</div>
+				</div>
+				<div class="col-lg-5 offset-lg-1">
+					<div class="s_product_text">
+						<h3>{{ single_product.name }} {{ single_product.category }}</h3>
+						<h2>{{ single_product.price }} руб./м</h2>
+						<ul class="list">
+                            <li><a href="#"><span>Цена, руб.:</span>{{ single_product.price }}</a></li>
+							<li><a class="active" href="#"><span>Артикул:</span>{{ single_product.article }}</a></li>
+
+						</ul>
+						<p>{{ single_product.description }}</p>
+						<div class="product_count">
+              <label for="qty">Колличество:</label>
+{#              <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"#}
+{#							 class="increase items-count" type="button"><i class="ti-angle-left"></i></button>#}
+							<input type="text" name="qty" id="sst" size="2" maxlength="12" value="1" title="Quantity:" class="input-text qty">
+{#							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"#}
+{#               class="reduced items-count" type="button"><i class="ti-angle-right"></i></button>#}
+{#                            </div>#}
+							<a class="button primary-btn" href="#">Добавить в корзину</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--================End Single Product Area =================-->
+
+{% endfor %}
+ <script src='{% static "fabric_shop/vendors/jquery/jquery-3.2.1.min.js" %}'></script>
+  <script src='{% static "fabric_shop/vendors/bootstrap/bootstrap.bundle.min.js" %}'></script>
+  <script src='{% static "fabric_shop/vendors/skrollr.min.js" %}'></script>
+  <script src='{% static "fabric_shop/vendors/owl-carousel/owl.carousel.min.js" %}'></script>
+  <script src='{% static "fabric_shop/vendors/nice-select/jquery.nice-select.min.js" %}'></script>
+  <script src='{% static "fabric_shop/vendors/jquery.ajaxchimp.min.js" %}'></script>
+  <script src='{% static "fabric_shop/vendors/mail-script.js" %}'></script>
+  <script src='{% static "fabric_shop/js/main.js" %}'></script>
+</body>
+</html>
+{% endblock %}

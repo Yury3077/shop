@@ -1,0 +1,216 @@
+{% extends "fabric_shop/base.html" %}
+{% load static %}
+
+{% block title %}
+<title> Fabric_shop </title>
+{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Aroma Shop - Home</title>
+	<link rel="icon" href='{% static "fabric_shop/img/Fevicon.png" %}' type="image/png">
+  <link rel="stylesheet" href='{% static "fabric_shop/vendors/bootstrap/bootstrap.min.css" %}'>
+  <link rel="stylesheet" href='{% static "fabric_shop/vendors/fontawesome/css/all.min.css" %}'>
+	<link rel="stylesheet" href='{% static "fabric_shop/vendors/themify-icons/themify-icons.css" %}'>
+  <link rel="stylesheet" href='{% static "fabric_shop/vendors/nice-select/nice-select.css" %}'>
+  <link rel="stylesheet" href='{% static "fabric_shop/vendors/owl-carousel/owl.theme.default.min.css" %}'>
+  <link rel="stylesheet" href='{% static "fabric_shop/vendors/owl-carousel/owl.carousel.min.css" %}'>
+
+  <link rel="stylesheet" href='{% static "fabric_shop/css/style.css" %}'>
+</head>
+<body>
+
+
+  <main class="site-main">
+    
+    <!--================ Hero banner start =================-->
+    <section class="hero-banner">
+      <div class="container">
+        <div class="row no-gutters align-items-center pt-60px">
+          <div class="col-5 d-none d-sm-block">
+            <div class="hero-banner__img">
+              <img class="img-fluid" src='{% static "fabric_shop/img/home/hero-banner.png" alt="" %}'>
+            </div>
+          </div>
+          <div class="col-sm-7 col-lg-6 offset-lg-1 pl-4 pl-md-5 pl-lg-0">
+            <div class="hero-banner__content">
+              <h4>Ткань для медицинской одежды</h4>
+              <h1>Большой выбор</h1>
+              <p>В любой сфере одежда очень важна. Для пошива медицинской спецодежды используются определенные виды тканей.На нашем сайте вы можете приобрести оптом самые пополярные виды ткани</p>
+              <a class="button button-hero" href="categories/">Каталог</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================ Hero banner start =================-->
+
+
+    <!-- ================ trending product section start ================= -->  
+    <section class="section-margin calc-60px">
+      <div class="container">
+        <div class="section-intro pb-60px">
+          <p>Товары из интернет магазина</p>
+          <h2>Товары из <span class="section-intro__style">Интернет магазина</span></h2>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src='{% static "fabric_shop/img/product/product1.png" %}' alt="">
+                <ul class="card-product__imgOverlay">
+                  <li><button><i class="ti-search"></i></button></li>
+                  <li><button><i class="ti-shopping-cart"></i></button></li>
+                  <li><button><i class="ti-heart"></i></button></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <p>Accessories</p>
+                <h4 class="card-product__title"><a href="single-product.html">Quartz Belt Watch</a></h4>
+                <p class="card-product__price">$150.00</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src='{% static "fabric_shop/img/product/product2.png" %}' alt="">
+                <ul class="card-product__imgOverlay">
+                  <li><button><i class="ti-search"></i></button></li>
+                  <li><button><i class="ti-shopping-cart"></i></button></li>
+                  <li><button><i class="ti-heart"></i></button></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <p>Beauty</p>
+                <h4 class="card-product__title"><a href="single-product.html">Women Freshwash</a></h4>
+                <p class="card-product__price">$150.00</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src='{% static "fabric_shop/img/product/product3.png" %}' alt="">
+                <ul class="card-product__imgOverlay">
+                  <li><button><i class="ti-search"></i></button></li>
+                  <li><button><i class="ti-shopping-cart"></i></button></li>
+                  <li><button><i class="ti-heart"></i></button></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <p>Decor</p>
+                <h4 class="card-product__title"><a href="single-product.html">Room Flash Light</a></h4>
+                <p class="card-product__price">$150.00</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src='{% static "fabric_shop/img/product/product4.png" %}' alt="">
+                <ul class="card-product__imgOverlay">
+                  <li><button><i class="ti-search"></i></button></li>
+                  <li><button><i class="ti-shopping-cart"></i></button></li>
+                  <li><button><i class="ti-heart"></i></button></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <p>Decor</p>
+                <h4 class="card-product__title"><a href="single-product.html">Room Flash Light</a></h4>
+                <p class="card-product__price">$150.00</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src='{% static "fabric_shop/img/product/product5.png" %}' alt="">
+                <ul class="card-product__imgOverlay">
+                  <li><button><i class="ti-search"></i></button></li>
+                  <li><button><i class="ti-shopping-cart"></i></button></li>
+                  <li><button><i class="ti-heart"></i></button></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <p>Accessories</p>
+                <h4 class="card-product__title"><a href="single-product.html">Man Office Bag</a></h4>
+                <p class="card-product__price">$150.00</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src='{% static "fabric_shop/img/product/product6.png" %}' alt="">
+                <ul class="card-product__imgOverlay">
+                  <li><button><i class="ti-search"></i></button></li>
+                  <li><button><i class="ti-shopping-cart"></i></button></li>
+                  <li><button><i class="ti-heart"></i></button></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <p>Kids Toy</p>
+                <h4 class="card-product__title"><a href="single-product.html">Charging Car</a></h4>
+                <p class="card-product__price">$150.00</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src='{% static "fabric_shop/img/product/product7.png" %}' alt="">
+                <ul class="card-product__imgOverlay">
+                  <li><button><i class="ti-search"></i></button></li>
+                  <li><button><i class="ti-shopping-cart"></i></button></li>
+                  <li><button><i class="ti-heart"></i></button></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <p>Accessories</p>
+                <h4 class="card-product__title"><a href="single-product.html">Blutooth Speaker</a></h4>
+                <p class="card-product__price">$150.00</p>
+              </div> 
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src='{% static "fabric_shop/img/product/product8.png" %}' alt="">
+                <ul class="card-product__imgOverlay">
+                  <li><button><i class="ti-search"></i></button></li>
+                  <li><button><i class="ti-shopping-cart"></i></button></li>
+                  <li><button><i class="ti-heart"></i></button></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <p>Kids Toy</p>
+                <h4 class="card-product__title"><a href="#">Charging Car</a></h4>
+                <p class="card-product__price">$150.00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================ trending product section end ================= -->  
+
+  </main>
+
+  <script src='{% static "fabric_shop/vendors/jquery/jquery-3.2.1.min.js" %}'></script>
+  <script src='{% static "fabric_shop/vendors/bootstrap/bootstrap.bundle.min.js" %}'></script>
+  <script src='{% static "fabric_shop/vendors/skrollr.min.js" %}'></script>
+  <script src='{% static "fabric_shop/vendors/owl-carousel/owl.carousel.min.js" %}'></script>
+  <script src='{% static "fabric_shop/vendors/nice-select/jquery.nice-select.min.js" %}'></script>
+  <script src='{% static "fabric_shop/vendors/jquery.ajaxchimp.min.js" %}'></script>
+  <script src='{% static "fabric_shop/vendors/mail-script.js" %}'></script>
+  <script src='{% static "fabric_shop/js/main.js" %}'></script>
+</body>
+</html>
+{% endblock %}

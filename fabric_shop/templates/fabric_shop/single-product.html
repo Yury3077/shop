@@ -1,0 +1,56 @@
+{% extends "fabric_shop/base.html" %}
+{% load static %}
+
+{% block title %}
+<title> Fabric_shop </title>
+{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Aroma Shop - Home</title>
+	<link rel="icon" href='{% static "fabric_shop/img/Fevicon.png" %}' type="image/png">
+  <link rel="stylesheet" href='{% static "fabric_shop/vendors/bootstrap/bootstrap.min.css" %}'>
+  <link rel="stylesheet" href='{% static "fabric_shop/vendors/fontawesome/css/all.min.css" %}'>
+	<link rel="stylesheet" href='{% static "fabric_shop/vendors/themify-icons/themify-icons.css" %}'>
+  <link rel="stylesheet" href='{% static "fabric_shop/vendors/nice-select/nice-select.css" %}'>
+  <link rel="stylesheet" href='{% static "fabric_shop/vendors/owl-carousel/owl.theme.default.min.css" %}'>
+  <link rel="stylesheet" href='{% static "fabric_shop/vendors/owl-carousel/owl.carousel.min.css" %}'>
+
+  <link rel="stylesheet" href='{% static "fabric_shop/css/style.css" %}'>
+</head>
+<body>
+
+{% for single_product in single_product %}
+  <main class="site-main">
+    <div class="col-md-6 col-lg-3 ftco-animate">
+        <div class="product">
+            <a href="#" class="img-prod"> <img class="img-fluid" src='{{ single_product.image.url }}' alt="Colorlib Template">
+            </a>
+                <div class="text py-3 pb-4 px-3 text-center">
+                    <h3>{{ single_product.name }} {{ single_product.category }}</h3>
+                    <h5>{{ single_product.article }}</h5>
+                    <h5>{{ single_product.price }}</h5>
+					<h5>{{ single_product.description }}</h5>
+                </div>
+        </div>
+    </div>
+  </main>
+{% endfor %}
+
+ <script src='{% static "fabric_shop/vendors/jquery/jquery-3.2.1.min.js" %}'></script>
+  <script src='{% static "fabric_shop/vendors/bootstrap/bootstrap.bundle.min.js" %}'></script>
+  <script src='{% static "fabric_shop/vendors/skrollr.min.js" %}'></script>
+  <script src='{% static "fabric_shop/vendors/owl-carousel/owl.carousel.min.js" %}'></script>
+  <script src='{% static "fabric_shop/vendors/nice-select/jquery.nice-select.min.js" %}'></script>
+  <script src='{% static "fabric_shop/vendors/jquery.ajaxchimp.min.js" %}'></script>
+  <script src='{% static "fabric_shop/vendors/mail-script.js" %}'></script>
+  <script src='{% static "fabric_shop/js/main.js" %}'></script>
+</body>
+</html>
+{% endblock %}
